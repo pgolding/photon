@@ -1,2 +1,3 @@
-# photon
-Photon entanglement simulator
+# Photon Entanglement Simulator
+
+A python version of the java-based simulator by Kumaresan Ramanathan. 
