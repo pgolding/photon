@@ -1,6 +1,8 @@
-# Photon Entanglement Simulator
+# Photon Simulator
 
-A python version of the java-based simulator by Kumaresan Ramanathan. 
+A python version of the java-based simulator by Kumaresan Ramanathan for learning the principles of quantum computing.
+
+## Entanglement Simulator
 
 To run the simulator, experiment with the parameters:
 
@@ -25,5 +27,34 @@ To set the measurement apparatus angles:
 
 ```python
 pairPrediction.set_measurement_angles(90, 90)
+```
+
+## Polarization Measurement Simulator
+
+Set the polarization of the photon via:
+
+```python
+photon = PhotonPolarizationMeasurement(0)
+```
+
+And set the measurement angle (filter angle) via:
+
+```python
+photon.measure_polarization(90)
+```
+
+The output will give the probability of polarization and the standard deviation.
+For angles like those given above `(0, 90)`, the output should be deterministic behavior:
+
+```
+MEAN: 0.0
+Standard Deviation: 0.0
+```
+
+But for a photo/measurement angle like, say, `(0, 45)`, it would be probabilistic and something like close to `0.5`:
+
+```
+MEAN: 0.491
+Standard Deviation: 0.4999189934379369
 ```
 
