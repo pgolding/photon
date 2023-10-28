@@ -29,6 +29,13 @@ To set the measurement apparatus angles:
 pairPrediction.set_measurement_angles(90, 90)
 ```
 
+Entanglement is a fundamental phenomenon in quantum mechanics where two or more particles become correlated in such a way that the state of one particle is directly related to the state of the other, regardless of the distance between them.
+
+Measurement breaks Entanglement: the act of observing or measuring one of the entangled particles. When you measure an entangled particle, its state collapses to a definite value, and due to the entanglement, the state of the other particle also becomes definite. However, this act of measurement effectively breaks the entanglement between the particles.
+
+The effect of entanglement is reflected in the measurement: even though the act of measurement breaks the entanglement, the outcomes of the measurements on both particles will still be correlated because of their previous entangled state. For instance, if two particles are entangled in such a way that if one is measured to be in state A, the other will be in state B, and vice versa, then measuring one and finding it in state A will instantly tell us that the other is in state B, even if they are light-years apart.
+
+
 ## Polarization Measurement Simulator
 
 Set the polarization of the photon via:
