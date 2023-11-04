@@ -14,22 +14,22 @@ namespace Quantum.QB4 {
     operation QB4Run() : Unit {
         Message("Hello quantum weirdness!");
 
-		mutable num0000 = 0;
-		mutable num0001 = 0;
-		mutable num0010 = 0;
-		mutable num0011 = 0;
-		mutable num0100 = 0;
-		mutable num0101 = 0;
-		mutable num0110 = 0;
-		mutable num0111 = 0;
-		mutable num1000 = 0;
-		mutable num1001 = 0;
-		mutable num1010 = 0;
-		mutable num1011 = 0;
-		mutable num1100 = 0;
-		mutable num1101 = 0;
-		mutable num1110 = 0;
-		mutable num1111 = 0;
+        mutable num0000 = 0;
+        mutable num0001 = 0;
+        mutable num0010 = 0;
+        mutable num0011 = 0;
+        mutable num0100 = 0;
+        mutable num0101 = 0;
+        mutable num0110 = 0;
+        mutable num0111 = 0;
+        mutable num1000 = 0;
+        mutable num1001 = 0;
+        mutable num1010 = 0;
+        mutable num1011 = 0;
+        mutable num1100 = 0;
+        mutable num1101 = 0;
+        mutable num1110 = 0;
+        mutable num1111 = 0;
 
         // Allocate four qubits.
         use qubits = Qubit[4];
@@ -38,32 +38,32 @@ namespace Quantum.QB4 {
         let iterations = 10000;
         while index < iterations {
 
-			// do nothing -- i.e. just initialize qubits
-			Set (Zero, qubits[0]);
-			//Set (Zero, qubits[1]);
-			//Set (Zero, qubits[2]);
-			Set (Zero, qubits[3]);
+            // do nothing -- i.e. just initialize qubits
+            Set (Zero, qubits[0]);
+            //Set (Zero, qubits[1]);
+            //Set (Zero, qubits[2]);
+            Set (Zero, qubits[3]);
 
-			//Demo of pass through (NOP)
-			Set (One, qubits[1]);
-			Set (One, qubits[2]);
+            //Demo of pass through (NOP)
+            Set (One, qubits[1]);
+            Set (One, qubits[2]);
 
-			//Demo of NOT gate
-			//Set (Zero, qubits[0]);
-			X(qubits[0]);
+            //Demo of NOT gate
+            //Set (Zero, qubits[0]);
+            X(qubits[0]);
 
-			//Demo of Hadamard
-			H(qubits[0]);
+            //Demo of Hadamard
+            H(qubits[0]);
 
-			//Demo of SWAP
-			SWAP (qubits[0],qubits[1]);
+            //Demo of SWAP
+            SWAP (qubits[0],qubits[1]);
 
-			//Demo of Controlled-NOT   ( CNOT )
-			CNOT(qubits[0],qubits[1]);
+            //Demo of Controlled-NOT   ( CNOT )
+            CNOT(qubits[0],qubits[1]);
 
-			//Demo of Bell State
-			H(qubits[0]);
-			CNOT(qubits[0],qubits[1]);
+            //Demo of Bell State
+            H(qubits[0]);
+            CNOT(qubits[0],qubits[1]);
 
             //Demo of Toffoli Gate in general configuration
             CCNOT(qubits[0],qubits[1],qubits[2]);
@@ -108,7 +108,7 @@ namespace Quantum.QB4 {
             if(res3 == One  and res2 == One  and res1 == Zero and res0 == One ){set num1101 = num1101 + 1;}
             if(res3 == One  and res2 == One  and res1 == One  and res0 == Zero){set num1110 = num1110 + 1;}
             if(res3 == One  and res2 == One  and res1 == One  and res0 == One ){set num1111 = num1111 + 1;}
-            
+
             set index += 1;
         } 
 
@@ -135,17 +135,17 @@ namespace Quantum.QB4 {
 
         // Release qubits to ket0 state, as required by Q# simulator
         Set(Zero, qubits[0]);
-		Set(Zero, qubits[1]);
-		Set(Zero, qubits[2]);
-		Set(Zero, qubits[3]);
+        Set(Zero, qubits[1]);
+        Set(Zero, qubits[2]);
+        Set(Zero, qubits[3]);
     }
 
     operation Set (desired: Result, q1: Qubit) : Unit
     {
-		let current = M(q1);
-		if (desired != current)
-		{
-			X(q1);
-		}   
+        let current = M(q1);
+        if (desired != current)
+        {
+            X(q1);
+        }   
     }
 }
