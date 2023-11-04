@@ -14,6 +14,7 @@ namespace Quantum.QB4 {
     operation QB4Run() : Unit {
         Message("Hello quantum weirdness!");
 
+        // Set up counters for our definite qubit states
         mutable num0000 = 0;
 		mutable num0001 = 0;
 		mutable num0010 = 0;
