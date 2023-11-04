@@ -65,3 +65,10 @@ MEAN: 0.491
 Standard Deviation: 0.4999189934379369
 ```
 
+# Q-Sharp Kitchen Sink
+
+I added a Q# kitchen sink from Kumaresan's course, but updated to use latest Q# syntax and language features. His program from his teaching materials no longer works as it uses deprecated language features.
+
+I left most of the experiments uncommented, but they need to be selectively used to get the desired quantum effects.
+
+[Code](kitchen_sink_q_sharp.qs)
